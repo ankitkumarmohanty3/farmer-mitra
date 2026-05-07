@@ -40,6 +40,14 @@ import dg_removed from './removeddark.png'
 import wh_cart from './wh_cart.png'
 import black_cart from './blk_cart.png'
 
+// ṬEAM IMAGES
+
+import ankit from '../TeamImage/ankit.jpg'
+import abhinash from '../TeamImage/abhinash.jpeg'
+import arpita from '../TeamImage/arpita.jpeg'
+import sansita from '../TeamImage/sansita.jpeg'
+import bijayalaxmi from '../TeamImage/bijaylaxmi.jpeg' 
+
 export const company_logos = [
   reliance_farmer,
   spencer_logo,
@@ -90,12 +98,10 @@ const assets = {
 export default assets
 
 export const teamData = [
-  { name: 'Haley Carter', title: 'CEO & founder', image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200' },
-  { name: 'James Walker', title: 'Ads manager', image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200' },
-  { name: 'Jessica Morgan', title: 'Vice president', image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop' },
-  { name: 'Ashley Bennett', title: 'Marketing & sales', image: 'https://randomuser.me/api/portraits/women/10.jpg' },
-  { name: 'Emily Parker', title: 'Content marketer', image: 'https://randomuser.me/api/portraits/women/11.jpg' },
-  { name: 'Ryan Mitchell', title: 'Content writer', image: 'https://randomuser.me/api/portraits/men/9.jpg' },
-  { name: 'Megan Brooks', title: 'Performance manager', image: 'https://randomuser.me/api/portraits/women/12.jpg' },
-  { name: 'Amber Foster', title: 'Senior writer', image: 'https://randomuser.me/api/portraits/women/14.jpg' },
+  { name: 'Ankit Kumar', title: 'Backend Developer', image: ankit },
+  { name: 'Abhinash Majhi', title: 'Frontend Developer', image: abhinash },
+  { name: 'Arpita Behera', title: 'Backend Developer', image: arpita },
+  { name: 'Sansita Bal', title: 'Frontend Developer', image: sansita },
+  { name: 'Bijayalaxmi', title: 'Database Administrator', image: bijayalaxmi },
+ 
 ]

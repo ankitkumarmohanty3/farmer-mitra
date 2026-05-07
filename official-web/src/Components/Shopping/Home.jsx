@@ -23,7 +23,7 @@ export default function Home() {
      const fetchProducts = async()=>{
       try{
           setLoading(true);
-          const response  =  await apiClient.get("/products");
+          const response  =  await apiClient.get("/assets");
           setProducts(response.data);
 
       }catch(error){
@@ -52,7 +52,7 @@ export default function Home() {
      }
   return (
     <div className="max-w-[1152px] mx-auto px-6 py-8">
-      <PageHeading title="Explore Eazy Stickers!">
+      <PageHeading title="Explore Farm products">
         Add a touch of creativity to your space with our wide range of fun and
         unique stickers. Perfect for any occasion!
       </PageHeading>

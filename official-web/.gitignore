@@ -1,4 +1,6 @@
-# Logs
+# =========================
+# LOGS
+# =========================
 logs
 *.log
 npm-debug.log*
@@ -7,16 +9,42 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# =========================
+# FRONTEND (React/Vite)
+# =========================
 node_modules
 dist
 dist-ssr
 *.local
 
-# Editor directories and files
+# =========================
+# BACKEND (Spring Boot)
+# =========================
+target/
+*.class
+
+# =========================
+# ENV FILES
+# =========================
+.env
+*.env
+
+# =========================
+# EDITOR FILES
+# =========================
 .vscode/*
 !.vscode/extensions.json
 .idea
+
+# =========================
+# OS FILES
+# =========================
 .DS_Store
+Thumbs.db
+
+# =========================
+# OTHER IDE FILES
+# =========================
 *.suo
 *.ntvs*
 *.njsproj

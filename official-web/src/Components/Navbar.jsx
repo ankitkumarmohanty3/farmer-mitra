@@ -4,7 +4,7 @@ import ThemeToggleBtn from "./ThemeToggleBtn";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useNavigate, useLocation } from "react-router-dom";
-
+import { useCart } from "./Shopping/CartContext";
 
 const Navbar = ({ theme, setTheme }) => {
      const [sidebarOpen,setSidebarOpen] =  useState(false);
@@ -18,6 +18,8 @@ const Navbar = ({ theme, setTheme }) => {
 //          navigate("/shoppingcart"); // bag closed → open it
 //      }
 // };
+
+const { cart } = useCart();
 
 const navigate = useNavigate();
 const location = useLocation();
@@ -101,6 +103,7 @@ const goToSection = (id) => {
            <img
          src={theme === 'dark' ? assets.wh_cart : assets.black_cart}
          alt=""
+         
          className="w-8 cursor-pointer"
         
         />

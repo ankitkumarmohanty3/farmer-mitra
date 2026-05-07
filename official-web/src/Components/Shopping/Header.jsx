@@ -2,16 +2,16 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingBasket } from "@fortawesome/free-solid-svg-icons";
-
+import { useCart } from "../Shopping/CartContext";
 const Header = () => {
-
+const { cart } = useCart();
   return (
-    <div>
+    <div className='dark:bg-gray-900 '>
 
          
 
 
-         <header className="w-full border-b bg-white dark:bg-primary">
+         <header className="w-full border-b bg-white dark:bg-gray-900 dark:text-white">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* Logo / Brand */}
@@ -30,16 +30,18 @@ const Header = () => {
           <Link to="/about" className="hover:text-green-600 transition">
             About
           </Link>
+            <a href="/cart" className="text-green-500 py-2">
+                <FontAwesomeIcon icon={faShoppingBasket}  className="dark:text-light " />
+                ({cart.length})
+              </a>
+
         </nav>
 
        
 
    {/* Shopping Section */}
 
-           <a href="/cart" className="text-green-500 py-2">
-                <FontAwesomeIcon icon={faShoppingBasket}  className="dark:text-light "/>
-              </a>
-
+         
 
 
         {/* CTA Button */}

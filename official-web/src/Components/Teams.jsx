@@ -9,7 +9,7 @@ const Teams = () => {
        whileInView="visible"
        viewport={{once:true}}
     className='flex flex-col items-center gap-7 px-40 sm:px-12 lg:px-24 xl:px-40 pt-10 text-gray-800 dark:text-white dark:bg-black'>
-      <Title title="Meet team" desc="A passionate team of digital experts dedicated to your brands success."/>
+      <Title title="Meet team" desc="United by technology and innovation, our team is committed to supporting farmers and building a fair digital marketplace."/>
 
       <div className='grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5'>
          {teamData.map((team, index)=>(
