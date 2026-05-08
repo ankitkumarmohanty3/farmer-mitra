@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@import "tailwindcss";
+
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+*{
+    font-family: "Manrope", sans-serif;
+    font-weight: 500;
+    box-sizing: border-box;
+ 
+}
+
+@theme {
+  --color-primary: #5044E5;
+  /* --color-secondary:#5FAED6; */
+  --color-secondary:#3F8FBF;
+  --font-style:"SN Pro", sans-serif;
+
+  /* SHOPPING CART COLOR */
+  --color-navbcart:#166534;
+  --color-navbcart-hover:#22C55E;
+
+  /* Button shopping */
+  --color-btn-primary:#F59E0B;
+
+  /* CARDS */
+}
+
+
