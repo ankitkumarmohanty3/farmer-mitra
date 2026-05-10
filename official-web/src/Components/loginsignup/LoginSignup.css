@@ -1,0 +1,158 @@
+.login-page {
+    background: #578cb1;
+    min-height: 100vh;
+    font-family: sans-serif;
+    padding-top: 40px;
+}
+
+/* container */
+.login-page .container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 100px;
+    width:600px;
+    background:#fff;
+    padding-bottom:30px;
+    border-radius: 6px;
+}
+
+/* header */
+.login-page .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:9px;
+    width:100%;
+    margin-top:30px;
+}
+
+.login-page .text{
+    color:#578cb1;
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.login-page .underline{
+    width: 61px;
+    height: 6px;
+    background: #578cb1;
+    border-radius: 9px;
+}
+
+/* inputs */
+.login-page .inputs{
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.login-page .input{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 480px;
+    padding: 10px 20px;
+    background: #eaeaea;
+    border-radius: 6px;
+}
+
+.login-page .input img{
+    margin:0px 30px;
+}
+
+.login-page .input input{
+    height: 50px;
+    width: 400px;
+    background: transparent;
+    border: none;
+    outline:none;
+    color:#797979;
+    font-size: 19px;
+}
+
+/* forgot password */
+.login-page .forgot-password{
+    padding-left:62px;
+    margin-top: 27px;
+    color:#797979;
+    font-size: 18px;
+}
+
+.login-page .forgot-password span{
+    color:#578cb1;
+    cursor: pointer;
+}
+
+/* buttons */
+.login-page .submit-container{
+    display: flex;
+    gap: 30px;
+    margin: 60px auto;
+}
+
+.login-page .submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 59px;
+    color: #fff;
+    background: #578cb1;
+    border-radius: 50px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.login-page .gray{
+    background: #EAEAEA;
+    color:#676767; 
+}
+
+/* logo */
+.login-page .logo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.login-page .logo {
+  width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+/* 🌙 Dark mode styles */
+.dark .login-page {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+.dark .login-page .container {
+  background: #111827;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.dark .login-page .text {
+  color: #578cb1;
+}
+
+.dark .login-page .underline {
+  background: #578cb1;
+}
+
+.dark .login-page .input {
+  background: #1f2937;
+}
+
+.dark .login-page .input input {
+  color: #e5e7eb;
+}
+
+.dark .login-page .forgot-password {
+  color: #9ca3af;
+}
+
+.dark .login-page .submit {
+  background: #578cb1;
+}

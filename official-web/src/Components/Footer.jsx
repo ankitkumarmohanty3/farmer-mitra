@@ -42,8 +42,8 @@ const Footer = ({theme}) => {
                transition={{duration:0.6, delay:0.3}}
               
             className='text-gray-600 dark:text-gray-400'>
-                  <h3 className='font-semibold'>Subscribe to our newsletter</h3>
-                  <p className='text-sm mt-2 mb-6'>The latest news, articles, and resources, set to your inbox weekly.</p>
+                  <h3 className='font-semibold'>Get Fresh Farm Updates</h3>
+                  <p className='text-sm mt-2 mb-6'>Receive updates on fresh arrivals, seasonal vegetables, and special offers.</p>
                   <div className='flex gap-2 text-sm'>
                     <input type="email"  placeholder='Enter your email'
                      className='w-full p-3 text-sm outline-none rounded dark:text-gray-200 bg-transparent border border-gray-300 dark:border-gray-500'

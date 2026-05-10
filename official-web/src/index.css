@@ -29,5 +29,15 @@
 
   /* CARDS */
 }
+/* Force all product card backgrounds to navy in dark mode */
+.dark .rounded-lg.flex-col {
+  background-color: #111827 !important;
+  border-color: #1f2937 !important;
+}
 
+/* Force text inside cards to be white */
+.dark .rounded-lg.flex-col h2, 
+.dark .rounded-lg.flex-col span {
+  color: white !important;
+}
 

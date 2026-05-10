@@ -39,14 +39,17 @@ import bg_removedlogo from './farmer-logo-removebg-preview.png'
 import dg_removed from './removeddark.png'
 import wh_cart from './wh_cart.png'
 import black_cart from './blk_cart.png'
+import shop from './shopping-cart-removebg-preview.png'
+import whshop from './cart_white.png'
 
-// ṬEAM IMAGES
 
-import ankit from '../TeamImage/ankit.jpg'
-import abhinash from '../TeamImage/abhinash.jpeg'
-import arpita from '../TeamImage/arpita.jpeg'
-import sansita from '../TeamImage/sansita.jpeg'
-import bijayalaxmi from '../TeamImage/bijaylaxmi.jpeg' 
+// TEAM MEMBER IMAGES
+import ankit from '../TeamImages/ankit.jpg'
+import arpita from '../TeamImages/arpita.jpeg'
+import abhinash from '../TeamImages/abhinash.jpeg'
+import bijayalaxmi from '../TeamImages/bijayalaxmi.jpeg'
+import sansita from '../TeamImages/sansita.jpeg'
+
 
 export const company_logos = [
   reliance_farmer,
@@ -56,7 +59,6 @@ export const company_logos = [
   hyperpure_farmer,
   homely_farmer,
 ]
-
 const assets = {
   logo,
   arrow_icon,
@@ -92,16 +94,26 @@ const assets = {
   bg_removedlogo,
   dg_removed,
   wh_cart,
-  black_cart
+  black_cart,
+  shop,
+  whshop,
+ ankit,
+  arpita,
+  abhinash,
+  bijayalaxmi,
+  sansita,
+
+
 }
 
 export default assets
 
 export const teamData = [
   { name: 'Ankit Kumar', title: 'Backend Developer', image: ankit },
-  { name: 'Abhinash Majhi', title: 'Frontend Developer', image: abhinash },
   { name: 'Arpita Behera', title: 'Backend Developer', image: arpita },
-  { name: 'Sansita Bal', title: 'Frontend Developer', image: sansita },
-  { name: 'Bijayalaxmi', title: 'Database Administrator', image: bijayalaxmi },
- 
+  { name: 'Abhinash Majhi', title: 'Frontend Developer', image: abhinash },
+  { name: 'Bijaya Laxmi', title: 'Database Administrator', image: bijayalaxmi },
+  { name: 'Sansita', title: 'Frontend Developer', image: sansita },
+  
+  
 ]

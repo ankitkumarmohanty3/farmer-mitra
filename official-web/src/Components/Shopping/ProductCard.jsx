@@ -1,94 +1,49 @@
-// import React from "react";
-// import Price from "./Price";
-// import { useCart } from "../Shopping/CartContext";
-
-// export default function ProductCard({ product }) {
-//   return (
-//     <div className="w-72 rounded-md mx-auto border border-gray-300 dark:border-gray-300 shadow-md overflow-hidden flex flex-col bg-white dark:bg-gray-800 hover:border-primary dark:hover:border-lighter transition">
-//       <div className="relative w-full h-72 border-b border-gray-300 dark:border-gray-600">
-//         <img
-//           src={product.imageUrl}
-//           onClick={() => addToCart(product)}
-//           alt={product.name}
-//           loading="lazy"
-//           className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
-//         />
-//       </div>
-//       <div className="relative h-48 p-4 flex flex-col font-primary">
-//         <h2 className="text-xl font-semibold text-primary dark:text-light mb-2">
-//           {product.name}
-//         </h2>
-//         <p className="text-base text-gray-600 mb-4 dark:text-light">{product.description}</p>
-//         <div className="flex items-center justify-between mt-auto">
-//           <div className="bg-lighter text-primary font-medium text-sm py-2 px-4 rounded-tl-md dark:bg-light">
-//             <Price currency="$" price={product.price}  onClick={() => addToCart(product)}/>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-
-
-
-
-import React, {
-  memo,
-  useCallback,
-} from "react";
-
+import React, { useContext } from "react";
 import Price from "./Price";
-import { useCart } from "../Shopping/CartContext";
+import { CartContext } from "./CartContext";
 
-function ProductCard({ product }) {
-  const { addToCart } = useCart();
-
-  // Stable function reference
-  const handleAddToCart = useCallback(() => {
-    addToCart(product);
-  }, [addToCart, product]);
+export default function ProductCard({ product }) {
+  const { addToCart } = useContext(CartContext);
 
   return (
-    <div className="w-72 mx-auto rounded-xl overflow-hidden border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 shadow-md hover:border-primary transition-all duration-300 flex flex-col">
+  <div className="w-full sm:w-72 rounded-lg border border-gray-200 dark:!border-gray-800 shadow-md overflow-hidden flex flex-col !bg-white dark:!bg-[#111827] transition-all">
+    
+    {/* Product Image Section */}
+    <div className="relative w-full h-64 overflow-hidden border-b border-gray-100 dark:!border-gray-800">
+      <img
+        src={product.imageUrl}
+        alt={product.name}
+        className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+      />
+    </div>
 
-      {/* Product Image */}
-      <div className="relative w-full h-72 overflow-hidden border-b border-gray-300 dark:border-gray-600">
-        <img
-          src={product.imageUrl}
-          alt={product.name}
-          loading="lazy"
-          onClick={handleAddToCart}
-          className="w-full h-full object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
-        />
-      </div>
+    {/* Content Section - Forced Background */}
+    <div className="p-4 flex flex-col flex-grow !bg-white dark:!bg-[#111827]">
+      <h2 className="text-lg font-bold !text-gray-800 dark:!text-white uppercase mb-1">
+        {product.name}
+      </h2>
+      
+      <p className="text-[#00a63e] dark:text-[#00c84b] font-bold text-xl mb-3">
+        ₹{product.price}
+      </p>
 
-      {/* Product Details */}
-      <div className="flex flex-col flex-1 p-4 font-primary">
-        <h2 className="text-xl font-semibold text-primary dark:text-white mb-2 line-clamp-1">
-          {product.name}
-        </h2>
-
-        <p className="text-base text-gray-600 dark:text-white mb-4 line-clamp-2">
-          {product.description}
-        </p>
-
-        {/* Footer */}
-        <div className="flex items-center justify-between mt-auto">
-          <button
-            onClick={handleAddToCart}
-            className="bg-lighter dark:bg-light text-primary font-medium text-sm py-2 px-4 rounded-md hover:opacity-90 transition"
-          >
-            <Price
-              currency="$"
-              price={product.price}
-            />
-          </button>
+      <div className="mt-auto space-y-3">
+        {/* Quantity Controls */}
+        <div className="flex items-center gap-2">
+          <button className="w-8 h-8 flex items-center justify-center !bg-gray-100 dark:!bg-gray-800 dark:!text-white rounded border border-gray-300 dark:border-gray-700">-</button>
+          <span className="w-8 text-center dark:text-white font-semibold">1</span>
+          <button className="w-8 h-8 flex items-center justify-center !bg-gray-100 dark:!bg-gray-800 dark:!text-white rounded border border-gray-300 dark:border-gray-700">+</button>
         </div>
+
+        {/* Action Button */}
+        <button 
+          onClick={() => addToCart(product)}
+          className="w-full bg-[#00a63e] hover:bg-[#008c34] text-white font-bold py-2.5 rounded transition-colors text-sm uppercase"
+        >
+          Add to Cart
+        </button>
       </div>
     </div>
+  </div>
   );
 }
-
-// Prevent unnecessary re-renders
-export default memo(ProductCard);
