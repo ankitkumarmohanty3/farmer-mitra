@@ -1,0 +1,15 @@
+# Database files and runtime data
+freshfarm-data/
+*.sock
+
+# IDE and build artifacts
+target/
+.idea/
+*.iml
+node_modules/
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
